@@ -1,0 +1,16 @@
+.transparent-bg {
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+}
+
+.list-group-item.inline {
+    display: inline-block !important;
+}
+
+.list-group-item.no-border {
+    border: none !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase;   
+}

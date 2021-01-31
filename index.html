@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>NGRX - Presentation @kusgautam</title>
+
+		<meta name="description" content="NGRX Presentation @kusgautam">
+		<meta name="author" content="kusgautam">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+		<!-- Bootstrap for few UI design -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<a href="https://ngrx.io/">
+						<img src="assets/img/ngrx-logo.png" 
+							alt="NgRx logo" 
+							style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" 
+							class="demo-logo"
+						>
+					</a>
+					<h3>NgRx</h3>
+					<p>Web Based Presentation</p>
+					<p>
+						<small>Created by <a href="https://github.com/aakarkun">Kus Gautam</a> @ <a href="https://www.bepatient.com">BePatient</a><br><br>Jan 2021 | V1.0</small>
+					</p>
+				</section>
+
+				<section>
+					<a href="#">
+						<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/waving-hand_1f44b.png" 
+							alt="NgRx logo" 
+							style="height: 100px; margin: 0 auto 2rem auto; background: transparent;" 
+							class="demo-logo"
+						>
+					</a>
+					<h3 class="fragment fade-in" style="text-transform: none;">
+						<!-- <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/waving-hand_1f44b.png" 
+						alt="NgRx logo" 
+						style="height: 80px; margin: 0 0.5rem 1.2rem auto; background: transparent;" 
+						class="demo-logo"
+					>  -->
+					Hi, Team!</h3>
+					<br>
+					<p class="fragment fade-up">This presentation is all about NgRx.</p>
+					<!-- <p class="fade-in-then-out">Redux.</p>
+					<p class="fade-in-then-out">Angular.</p>
+					<p class="fade-in-then-out	">RxJs.</p> -->
+					<!-- <a href="#">
+						<img src="https://miro.medium.com/max/700/1*DVosRXugcOazRS37dpC4ug.png" 
+							alt="NgRx logo" 
+							style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" 
+							class="demo-logo"
+						>
+					</a> -->
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Outline
+						<hr class="bg-dark">
+					</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="text-left">
+								<p class="fragment fade-up">NgRx</p>
+								<p class="fragment fade-up">Redux</p>
+								<p class="fragment fade-up">Core concept of Redux</p>
+								<p class="fragment fade-up">State</p>
+								<p class="fragment fade-up">Action</p>
+								<p class="fragment fade-up">Reducer</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="text-left">
+								<p class="fragment fade-up">Store</p>
+								<p class="fragment fade-up">Reducer & Store</p>
+								<p class="fragment fade-up">Example</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<!-- NgRx -->
+				<section>
+					<section>
+						<h2>What is NgRx?
+						<hr class="bg-dark">
+						</h2>
+						<br>
+						<p class="fragment fade-in">Angular implementation of <b>Redux</b>.</p>
+						<small class="fragment fade-up">Reactive state for Angular!</small>
+						<br>
+						<p class="fragment fade-in-then-out">
+							<a href="#" class="navigate-down">
+								<img class="" style="background: rgba(255,255,255,0);" width="64" height="64" data-src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/backhand-index-pointing-down_1f447.png" alt="Down arrow">
+							</a>
+						</p>
+					</section>
+					<section>
+						<h4 class="fragment fade-in">NgRx is a framework for building reactive applications in Angular.
+							<hr class="bg-dark">
+						</h4>
+						<p class="fragment fade-in">NgRx provides:
+						</p> 
+						<div class="row mt-5">
+							<div class="col-md-2">
+								<small class="fragment fade-in">State management</small> 
+							</div>
+							<div class="col-md-2">
+								<small class="fragment fade-in">Isolation of side effects</small>
+							</div>
+							<div class="col-md-2">
+								<small class="fragment fade-in">Entity collection management</small> 
+							</div>
+							<div class="col-md-2">
+								<small class="fragment fade-in">Router bindings</small> 
+							</div>
+							<div class="col-md-2">
+								<small class="fragment fade-in">Code generation</small> 
+							</div>
+							<div class="col-md-2">
+								<small class="fragment fade-in">Developer tools</small> 
+							</div>
+						</div>
+						<br>
+						<small class="fragment fade-in">
+						<hr class="bg-dark">
+						Developer tools that enhance developers experience when building many different types of applications.</small>
+					</section>
+				</section>
+				<!-- Redux	 -->
+				<section>
+					<h2 class="mt-2">Redux
+						<hr class="bg-dark">
+					</h2>
+					<p>A Predictable State Container for JS Apps</p>
+					<div class="mt-5">
+						<div class="row">
+							<div class="col-sm-3 fragment fade-up">
+								<a href="#">
+									<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/heavy-check-mark_2714.png" 
+										alt="NgRx logo" 
+										style="height: 52px; margin: 1rem auto 1rem auto; background: transparent;" 
+									>
+								</a>
+								<p>Predictable</P>
+								<!-- <small class="lead fragment">Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.</small> -->
+							</div>
+							<div class="col-sm-3 fragment fade-up">
+								<a href="#">
+									<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/direct-hit_1f3af.png" 
+										alt="NgRx logo" 
+										style="height: 58px; margin: 1rem auto 1rem auto; background: transparent;" 
+									>
+								</a>
+								<p>Centralized</P>
+								<!-- <small class="lead fragment">Centralizing your application's state and logic enables powerful capabilities like undo/redo, state persistence, and much more.</small> -->
+							</div>
+							<div class="col-sm-3 fragment fade-up">
+								<a href="#">
+									<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/lady-beetle_1f41e.png" 
+										alt="NgRx logo" 
+										style="height: 52px; margin: 1rem auto 1rem auto; background: transparent;" 
+									>
+								</a>
+								<p>Debuggable</P>
+								<!-- <small class="lead fragment">The Redux DevTools make it easy to trace when, where, why, and how your application's state changed. Redux's architecture lets you log changes, use "time-travel debugging", and even send complete error reports to a server.</small> -->
+							</div>
+							<div class="col-sm-3 fragment fade-up">
+								<a href="#">
+									<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/gear_2699-fe0f.png" 
+										alt="NgRx logo" 
+										style="height: 52px; margin: 1rem auto 1rem auto; background: transparent;" 
+									>
+								</a>
+								<p>Flexible</P>
+								<!-- <small class="lead fragment">Redux works with any UI layer, and has a large ecosystem of addons to fit your needs.</small> -->
+							</div>
+							
+						</div>
+						<br>
+						<div class="row justify-content-md-center fragment fade-up">
+							<div class="col-md-6">
+								<small>
+									Other Libraries from Redux Team:
+								<br><br>
+								<ul class="list-group">
+									<a href="https://react-redux.js.org/" class="fragment fade-right list-group-item inline list-group-item-primary text-decoration-none text-dark">React-Redux</a>
+									<a href="#" class="fragment fade-left list-group-item inline list-group-item-success text-decoration-none text-dark">React-Toolkit</a>
+								</ul>
+							</small>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- When we need Redux -->
+				<section>
+					<h2 class="fragment fade-in">When we need Redux?
+						<hr class="bg-dark">
+					</h2>
+					<h4 class="fragment fade-in">If you are experiencing the following symptoms you might need Redux:</h4>
+					<p class="fragment fade-in-then-semi-out">A feeling that the state is spread out</p>
+					<p class="fragment fade-in-then-semi-out">Issues with updating state</p>
+					<p class="fragment fade-in-then-semi-out">State keeps changing but you don't know which or what</small</p>
+				</section>
+
+				<!-- Solution  -->
+				<section>
+					<h2>Solution
+						<hr class="bg-dark">
+					</h2>
+					<p class="fragment fade-up">
+						A single source of truth with reducers guarding state change
+					</p>
+					<p class="fragment fade-up">
+						Also enhanced predictability with immutable data structures.
+					</p>
+				</section>
+				<!-- Core concept -->
+				<section>
+					<h2>Core Concept of Redux
+						<hr class="bg-dark">
+					</h2>
+					<p class="fragment fade-in-then-semi-out">
+						Store | our data store
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						Reducer | a function that takes state + action and
+						produces a new state
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						Selector | selects a slice of state
+					</p>
+					<p class="fragment fade-in-then-semi-out">
+						Action | an intention of state change
+					</p>						
+					<p class="fragment fade-in-then-semi-out">
+						Action creator | produces an intention that may
+						include data						
+					</p>
+				</section>
+
+				<!-- State -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">State
+						<hr class="bg-dark">
+					</h2>
+					<p class="fragment fade-in-then-semi-out">It is a single point of truth</p>
+					<p class="fragment fade-in-then-semi-out">Is read only</p>
+					<p class="fragment fade-in-then-semi-out">Everything is stored in a single tree</p>
+				</section>
+				
+				<!-- Action -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">Action
+						<hr class="bg-dark">
+					</h2>
+					<p class="fragment fade-in-then-semi-out">Only way to update the state</p>
+					<p class="fragment fade-in-then-semi-out">Can have a payload</p>
+					<p class="fragment fade-in-then-semi-out">Are transitions between states</p>
+				</section>
+
+				<!-- Last call -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">Last time, What is Redux/NgRx??
+						<hr class="bg-dark">
+					</h2>
+					<p class="fragment fade-up">Redux is the pattern</p>
+					<p class="fragment fade-up">NgRx is its Angular implementation</p>
+				</section>
+
+				<!-- Reducer -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">Reducer
+						<hr class="bg-dark">
+					</h2>
+					<p class="fragment fade-in-then-semi-out">A pure function that deals with state</p>
+					<p class="fragment fade-in-then-semi-out">It takes an action and the current state as a parameter</p>
+					<pre class="fragment fade-in" data-id="code-animation">
+						<code class="hljs" data-trim data-line-numbers>
+							Reducer(state, action) => new state
+						</code>
+					</pre>
+					<p class="fragment fade-in-then-semi-out">Always return a new state object; does not edit the current state</p>
+					<p class="fragment fade-in-then-semi-out">Reducers perform synchronous state changes</p>
+				</section>
+
+				<!-- Example for reducer -->
+				<section data-auto-animate>
+					<h3 data-id="code-title">Let's see an example for Reducer!
+						<hr class="bg-dark">
+					</h3>
+					<small class="fragment fade-in-then-semi-out">Basically, it takes state and action as a parameter</small>
+					<pre data-id="code-animation">
+						<code class="hljs fragment fade-in-then-semi-out" data-trim data-line-numbers>
+							export function reducer( state = initialState, action: Action ): State {
+								switch (action.type) {
+									case "LOAD_EVENTS":
+										return { 
+											...state, 
+											events: action.payload 
+										};
+									default:
+										return state;
+								}
+							}
+						</code>
+					</pre>
+				</section>
+
+				<!-- Store -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">Store
+						<hr class="bg-dark">
+					</h2>
+					<p class="fragment fade-in-then-semi-out">Store is in charge of storing the data</p>
+					<p class="fragment fade-in-then-semi-out">It holds the current state and all of the reducer</p>
+					<p class="fragment fade-in-then-semi-out">Store is the central object where everything happens</p>
+					<p class="fragment fade-in-then-semi-out">We use it to change the state</p>
+					<p class="fragment fade-in-then-semi-out">We use it to subscribe to state updates</p>
+				</section>
+
+				<!-- Reducer and Store -->
+				<section data-auto-animate>
+					<h2>Reducer & Store
+						<hr class="bg-dark">
+					</h2>
+					<br>
+					<div class="row justify-content-md-center">
+						<div class="col-md-4 text-center">
+							<h4 class="fragment fade-left" data-id="code-title">Reducer
+								<hr class="bg-dark">
+							</h4>
+							<small class="fragment fade-in-then-semi-out">Pure function</small><br>
+							<small class="fragment fade-in-then-semi-out">Creates brand new state</small><br>
+							<small class="fragment fade-in-then-semi-out">Synchronous</small>
+						</div>
+						<div class="col-md-4 text-center">
+							<h4 class="fragment fade-right" data-id="code-title">Store
+								<hr class="bg-dark">
+							</h4>
+							<small class="fragment fade-in-then-semi-out">Holds the state</small><br>
+							<small class="fragment fade-in-then-semi-out">Used to dispatch actions</small><br>
+							<small class="fragment fade-in-then-semi-out">Used to get state updates</small>
+						</div>
+					</div>
+					<div class="row justify-content-md-center mt-5">
+						<div class="col-md-8">
+							<h4 class="fragment fade-up" data-id="code-title">NgRx
+								<hr class="bg-dark">
+							</h4>
+							<small class="fragment fade-in-then-semi-out">Has its own store implementation</small><br>
+							<small class="fragment fade-in-then-semi-out">Uses RxJs so we can use observables and operators</small>
+						</div>
+					</div>
+
+				</section>
+
+				<!-- Look and feel for Store  -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">What store really look like?
+						<hr class="bg-dark">
+					</h2>
+					<small class="fragment fade-in-then-semi-out">Typical store contain, just an object '{ }'</small>
+					<pre data-id="code-animation">
+						<code class="hljs fragment fade-up" data-trim data-line-numbers>
+							{
+								counter: 'a value',
+								user: [{ id: 1, name: 'Person' }],
+								selectedUser: { id: 1, name: 'Person' }
+							}
+						</code>
+					</pre>
+				</section>
+
+				<!-- Simple store  -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">A simple Store!
+						<hr class="bg-dark">
+					</h2>
+					<small class="fragment fade-in-then-semi-out">Simplest form of store</small>
+					<pre data-id="code-animation">
+						<code class="hljs fragment fade-up" data-trim data-line-numbers>
+							class Store {
+								constructor(initialState) { this.state = initialState; }
+								dispatch(action) {
+									this.state = calc(this.state, action);
+								}
+								calc(state, action) {
+									return {
+										counter: counterReducer(state.counter, action),
+										users: usersReducer(state.users, action)
+									}
+								}
+							}	
+						</code>
+					</pre>
+				</section>
+
+				<!-- Usage of store -->
+				<section data-auto-animate>
+					<h2 data-id="code-title">Usage of Store
+						<hr class="bg-dark">
+					</h2>
+					<small class="fragment fade-up">The way of using simple store</small>
+					<pre data-id="code-animation">
+						<code class="hljs fragment fade-up" data-trim data-line-numbers>
+							let store = new Store({ counter: 0, user: [] });
+							store.dispatch({ type: 'INCREMENT' });
+							// { counter: 1, users: [] }
+							store.dispatch({
+								type: 'ADD_USER',
+								payload: { id: 1, name: 'Yoda' }
+							});
+							// { counter: 1, users: [{ id: 1, name: 'Yoda' }] }
+							
+							store.dispatch({
+							type: 'REMOVE_User',
+							payload: { id: 1 }
+							});
+							
+							// { counter: 1, users: [] }
+						</code>
+					</pre>
+				</section>
+
+				<!-- Any queries? -->
+				<section>
+					<h1 class="fade-in">Any Queries?</h1><br>
+					<br>
+					<small class="text-muted">References | Data and image used from:</small><br>
+					<small class="text-muted"><span class="fragment">ngrx.io</span><span class="fragment"> | angular.io</span></small>
+				</section>
+
+				<!-- Thank you note -->
+				<section>
+					<h1 class="fragment fade-up">Thank you!</h1>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: 'c/t',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,5 +1,5 @@
 # ngrx-slides
 NgRx Slides
 
-[Web View](bit.ly/ngrx-slides)
+[Web View](https://bit.ly/ngrx-slides)
 

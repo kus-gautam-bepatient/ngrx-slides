@@ -1,2 +1,4 @@
-# ngrx-presentation
-NgRx Presentation
+# ngrx-slides
+NgRx Slides
+
+bit.ly/ngrx-slides
